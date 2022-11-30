@@ -8,7 +8,7 @@
  * Return: If the function fails return NULL.
  * Otherwise return a pointer to the new current.
  */
-listint_t *insert_current(listint_t **head, int number)
+listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *current = *head, *new;
 
