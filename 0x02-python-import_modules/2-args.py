@@ -4,7 +4,7 @@ if __name__ == "__main__":
     import sys
 
     argsCount = len(sys.argv) - 1
-    print(argsCount)
+    
     if argsCount == 0:
         print("0 argument.")
     elif argsCount == 1:
