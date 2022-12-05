@@ -1,3 +1,4 @@
+#include "lists.h"
 /**
  * is_palindrome - checks if a singly linked list is a palidrome.
  * @@head: the head of the list
