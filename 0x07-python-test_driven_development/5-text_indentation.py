@@ -14,7 +14,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     count = 0
-    while count  < len(text) and text[c] == ' ':
+    while count  < len(text) and text[count] == ' ':
         count += 1
 
     while count  < len(text):
