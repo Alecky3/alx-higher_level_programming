@@ -65,11 +65,11 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-        """Return the string representation of the Rectangle."""
+        """Returns the string representation of the Rectangle."""
 
         return ("Rectangle(" + str(self.__width) + ", " + str(self.__width)
-    + ")")
+                + ")")
 
     def __del__(self):
-        """Print a message for every deletion of a Rectangle."""
+        """Prints a message for every deletion of a Rectangle."""
         print("Bye rectangle...")
