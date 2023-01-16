@@ -120,3 +120,4 @@ class Rectangle(Base):
                     self.x = arg
                 else:
                     self.y = arg
+                count += 1
