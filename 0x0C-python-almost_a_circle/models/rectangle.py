@@ -15,6 +15,10 @@ class Reactangle(Base):
           x (int): the x coordinate of the rectangle
           y (int): y coordinate of the rectangle
           id (int): identifies the reactangle
+        Raises:
+          TypeError: if either of width, height, x or y is not an integer
+          ValueError: if either of width or height <= 0
+          ValueError: if either x or y is < 0
         """
         super().__init__(id)
         self.width = width
@@ -24,40 +28,52 @@ class Reactangle(Base):
 
     @property
     def width(self):
-        """Returns the width of the rectangle."""
+        """Gets/Sets the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, width):
-        """Sets the width of the rectangle."""
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
         self.__width = width
 
     @property
     def height(self):
-        """Returns the height of the rectangle."""
+        """Gets/Sets the height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, height):
-        """Sets the height of the rectangle."""
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
         self.__height = height
 
     @property
     def x(self):
-        """Returns the x coordinate of the rectangle."""
+        """Gets/Sets the x coordinate of the rectangle."""
         return self.__x
 
     @x.setter
     def x(self, x):
-        """Sets the x coordinate."""
+        if type(x) is not int:
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
         self.__x = x
 
     @property
     def y(self):
-        """Returns the y coordinate."""
+        """Sets/Gets the y coordinate."""
         return self.__y
 
     @y.setter
     def y(self, y):
-        """Sets the y coordinate."""
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
         self.__y = y
