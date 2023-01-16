@@ -101,11 +101,13 @@ class Rectangle(Base):
                 self.id, self.x, self.y, self.width, self.height
                 )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns an argument to each attribute
 
         Args:
           *args (list): the argumets to use for updating the attributes
+          **kwargs (dict): the arguments to use for updating the attribues
+                           when *args are not present
         """
         count = 0
         if args and len(args) != 0:
