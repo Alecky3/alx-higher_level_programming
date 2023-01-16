@@ -3,7 +3,7 @@
 from base import Base
 
 
-class Reactangle(Base):
+class Rectangle(Base):
     """ Represents 'Rectangle' class which is a subclass of 'Base'."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
