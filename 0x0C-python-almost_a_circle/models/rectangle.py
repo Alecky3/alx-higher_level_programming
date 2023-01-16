@@ -82,3 +82,13 @@ class Reactangle(Base):
         """Returns the area of the rectangle."""
 
         return (self.width * self.height)
+
+    def display(self):
+        """Prints in stdout the Rectangle instance
+        with the character #.
+        """
+        for r in range(self.height):
+            for y in range(self.width):
+                print("#", end="")
+
+            print()
