@@ -15,7 +15,7 @@ class Square(Rectangle):
     """
 
     def __init__(self, size, x=0, y=0, id=None):
-        supe().__init__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """Retruns the print() and str() representation of Square."""
