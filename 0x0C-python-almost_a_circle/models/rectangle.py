@@ -92,3 +92,9 @@ class Reactangle(Base):
                 print("#", end="")
 
             print()
+
+    def __str__(self):
+        """Returns the str() and print() representation of Rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.width, self.height
+                )
