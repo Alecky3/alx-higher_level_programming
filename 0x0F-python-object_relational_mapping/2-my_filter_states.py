@@ -12,7 +12,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(user=args[0], passwd=args[1], database=args[2])
     c = db.cursor()
     query = """SELECT id,name FROM states
-               WHERE name LIKE '{}'
+               WHERE BINARY name = '{}'
                ORDER BY id
             """.format(args[3])
     c.execute(query)
