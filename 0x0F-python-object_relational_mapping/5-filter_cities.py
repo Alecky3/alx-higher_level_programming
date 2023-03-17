@@ -8,13 +8,12 @@ if __name__ == "__main__":
     args = sys.argv[-4:]
     db = MySQLdb.connect(user=args[0], passwd=args[1], database=args[2])
     c = db.cursor()
-    c.execute("""SELECT c.name FROM cities AS c
+    c.execute("""SELECT c.name,s.name FROM cities AS c
                  JOIN states AS s
                  ON s.id = c.state_id
-                 WHERE s.name = '{}'
                  ORDER BY c.id
-             """.format(args[3]))
-    r = c.fetchall()
+             """)
+    r = [name for name in c.fetchall() if name[1] == args[3]]
     count = 0
     for row in r:
         print(row[0], end="")
