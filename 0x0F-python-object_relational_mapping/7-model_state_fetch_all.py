@@ -18,4 +18,3 @@ if __name__ == '__main__':
     q = session.query(State).order_by(State.id).all()
     for s in q:
         print("{}: {}".format(s.id, s.name))
-
