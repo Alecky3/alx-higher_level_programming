@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     session = Session()
 
-    q = session.query(State).order_by(State.id).all()
-    for s in q:
-        print("{}: {}".format(s.id, s.name))
+    q = session.query(State).order_by(State.id).first()
+    if q is not None:
+        print("{}: {}".format(q.id, q.name))
 
