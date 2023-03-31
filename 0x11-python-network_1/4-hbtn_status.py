@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fetches 'https://intranet.hbtn.io/status'."""
+"""Fetches 'https://intranet.hbtn.io/status'. using requests module"""
 import requests
 
 
